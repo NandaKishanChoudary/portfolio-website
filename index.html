@@ -4,147 +4,241 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nk.27</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      color: white;
+      background-color: black;
+      scroll-behavior: smooth;
+    }
 
-  <link rel="stylesheet" href="styles.css">
+    nav.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      flex-wrap: wrap;
+    }
 
-  <title>Portfolio</title>
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .home {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .home-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .home-img {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .bars-animation {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .bar {
+      width: 10px;
+      height: 50px;
+      margin: 0 5px;
+      background: #ffffff;
+      animation: bounce 1s infinite ease-in-out;
+      animation-delay: calc(var(--i) * 0.1s);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(2);
+      }
+    }
+
+    .btn-sci .sci a {
+      font-size: 24px;
+      margin-right: 15px;
+      color: white;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      nav.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-info, .home-img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="left">
-      <a href="/">John Doe</a>
-    </div>
 
-    <div class="right">
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i>
-        <span>Github</span>
-      </a>
-      
-      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>Linkedin</span>
-      </a>
-      
-      <a href="mailto:john@example.com">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
-      </a>
-    </div>
+  <nav class="navbar">
+    <a href="#" class="logo">Portfolio</a>
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Contact">Contact</a></li>
+      <li><a href="#Achievements">Achievements</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <!-- SECTION 1: Hero -->
-    <section class="hero-section">
-      <div class="text">
-        <h2>Hi, I'm John 👋</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto, provident aperiam. Iste, repellat aperiam!</p>
+  <div class="bars-animation">
+    <div class="bar" style="--i:6"></div>
+    <div class="bar" style="--i:5"></div>
+    <div class="bar" style="--i:4"></div>
+    <div class="bar" style="--i:3"></div>
+    <div class="bar" style="--i:2"></div>
+    <div class="bar" style="--i:1"></div>
+  </div>
 
-        <div class="links">
-          <a href="#skills">
-            <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
-          </a>
-          
-          <a href="#testimony">
-            <i class="fa-solid fa-pen"></i>
-            <span>Testimony</span>
-          </a>
-          
-          <a href="#contact">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Contact</span>
-          </a>
+  <section id="Home" class="home">
+    <div class="home-info">
+      <h1>Nanda Kishan Choudary</h1>
+      <h2>The magic you are looking for is in the work you are avoiding.</h2>
+      <div class="btn-sci">
+        <div class="sci">
+          <a href="https://github.com/NandaKishanChoudary"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/nanda-kishan-choudary-a1435b334"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.instagram.com/nanda_kishan_choudary"><i class='bx bxl-instagram-alt'></i></a>
+          <a href="mailto:nkchoudary27@gmail.com"><i class='bx bxl-gmail'></i></a>
         </div>
       </div>
-
-      <div class="headshot">
-        <img src="images/hero-headshot.webp" alt="john doe headshot">
-      </div>
-    </section>
-
-    <!-- SECTION 2: Skills -->
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?
-      </div>
-
-      <div class="cells">
-        <div class="cell">
-          <img src="images/html-logo.webp" alt="html logo">
-          <span>HTML</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/css-logo.webp" alt="css logo">
-          <span>CSS</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/javascript-logo.webp" alt="javascript logo">
-          <span>JavaScript</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/node-logo.webp" alt="node logo">
-          <span>Node.js</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/react-logo.webp" alt="react logo">
-          <span>React.js</span>
+    </div>
+    <div class="home-img">
+      <div class="img-box">
+        <div class="img-item">
+          <img src="nk-removebg.png" alt="Profile Image">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 3: Testimony -->
-    <section id="testimony" class="testimony-section">
-      <h2>Testimony</h2>
+  <section id="About">
+    <h2>Nanda Kishan Choudary</h2>
+    <p>Namaskaram!<br>
+      I was born in 2006 in Visakhapatnam. I completed my schooling in TIMPANY SCHOOL (ICSE), Visakhapatnam.<br>
+      Did my college (11th and 12th) in NARAYANA academy (CBSE).<br>
+      Right now I am an undergraduate in AMRITA VISHWA VIDYAPEETHAM.<br>
+      Since childhood I have been an enthusiast in experimenting and multitasking many things.<br><br>
+    </p>
+    <ul>
+      <p>The talents I have:</p>
+      <li>Music (Guitar and Keyboard)</li>
+      <li>Abacus</li>
+      <li>Cricket</li>
+      <li>Skating</li>
+    </ul><br>
+    <ul>
+      <p>The languages I can speak are:</p>
+      <li>English</li>
+      <li>Telugu</li>
+      <li>Hindi</li>
+      <li>Oriya</li>
+    </ul><br>
+    <ul>
+      <p>The programming languages I know:</p>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Java</li>
+    </ul>
+  </section>
 
-      <div class="group">
-        <div class="person-details">
-          <img src="images/testimony-headshot.webp">
-          <p>John Doe</p>
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
+  <section id="Projects">
+    <h2>Projects</h2><br>
+    <p>Participated in the MUN talk held in my school.</p>
+    <p>It is an initiative to help students simulate world-wide continental matters and to eliminate destruction and generate peace.</p><br>
+    <p>Also made a video on "SOLAR BULB BOTTLE MODEL" and got it published into a competition with the help of my teachers:</p><br>
+    <img src="https://content.instructables.com/FK5/2M6M/GTGCR130/FK52M6MGTGCR130.jpg?auto=webp" alt="Solar Bulb">
+  </section>
 
-        <div class="text">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque quaerat nostrum laborum? Rem adipisci natus eos nemo reprehenderit, cumque nostrum enim commodi. Eum, enim vero eveniet doloremque sed veniam. Doloremque explicabo non reprehenderit expedita! Accusamus mollitia repellendus dolorum officiis libero quod deleniti cum."
-        </div>
+  <section id="Contact">
+    <h2>Contact</h2>
+    <p>You can contact me in the following ways:</p>
+    <p>Mobile NO: 7416262006</p>
+    <p>Email: nkchoudary27@gmail.com</p>
+    <div class="btn-sci">
+      <div class="sci">
+        <a href="https://github.com/NandaKishanChoudary"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/nanda-kishan-choudary-a1435b334"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/nanda_kishan_choudary"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="mailto:nkchoudary27@gmail.com"><i class='bx bxl-gmail'></i></a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 4: Contact -->
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
+  <section id="Achievements">
+    <h2>Achievements</h2>
+    <p>There are a number of achievements:</p>
+    <p>I have been a "NATIONAL" champion in BrainoBrain Abacus Champion:</p>
+    <img src="abacusbg.png" alt="Abacus Award"><br>
+    <p>I have a professional degree in "ROCK SCHOOL" of music:</p><br>
+    <img src="rockbg.png" alt="Music Certificate"><br>
+    <p>I won many medals in district level of Skating:</p><br>
+    <img src="skatingbgg.png" alt="Skating Medal">
+  </section>
 
-      <div class="group">
-        <div class="text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugit maiores atque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae, iusto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis.
-        </div>
-
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email">
-
-          <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
 </body>
 </html>
